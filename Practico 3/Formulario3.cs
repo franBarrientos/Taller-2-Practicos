@@ -84,6 +84,12 @@ namespace Practicos.Practico_3
                 MessageBox.Show("Por favor, seleccione un tipo de tarjeta.", "Entrada inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
+            if (!CBVaron.Checked && !CBMujer.Checked)
+            {
+                MessageBox.Show("Por favor, seleccione un genero.", "Entrada inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             LModificar.Text = name + " " + surname;
 
             if (CBVaron.Checked)
@@ -162,6 +168,12 @@ namespace Practicos.Practico_3
             if (!CBMastercard.Checked && !CBVisa.Checked && !CBNaranja.Checked)
             {
                 MessageBox.Show("Por favor, seleccione un tipo de tarjeta.", "Entrada inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!CBVaron.Checked && !CBMujer.Checked)
+            {
+                MessageBox.Show("Por favor, seleccione un genero.", "Entrada inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             LModificar.Text = name + " " + surname;
