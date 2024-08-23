@@ -65,6 +65,12 @@ namespace Practicos.Practico_3
                 return;
             }
 
+            if (!telefono.All(char.IsDigit))
+            {
+                MessageBox.Show("Por favor, ingrese solo números en el campo Telefono.", "Entrada inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            
             if (dni.Length != 8)
             {
                 MessageBox.Show("Por favor, ingrese un DNI de 8 digitos.", "Entrada inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -152,6 +158,12 @@ namespace Practicos.Practico_3
                 return;
             }
 
+            if (!telefono.All(char.IsDigit))
+            {
+                MessageBox.Show("Por favor, ingrese solo números en el campo Telefono.", "Entrada inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            
             if (dni.Length != 8)
             {
                 MessageBox.Show("Por favor, ingrese un DNI de 8 digitos.", "Entrada inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
