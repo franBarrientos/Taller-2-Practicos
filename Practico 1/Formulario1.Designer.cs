@@ -1,4 +1,4 @@
-﻿namespace Practico1
+﻿namespace Practicos.Practico_1
 {
     partial class Formulario1
     {
@@ -127,13 +127,16 @@
             Controls.Add(BEliminar);
             Controls.Add(BGuardar);
             KeyPreview = true;
+            MaximizeBox = false;
+            MaximumSize = new Size(500, 300);
+            MinimumSize = new Size(500, 300);
             Name = "Formulario1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Mi primer Forms";
             Load += Formulario1_Load;
+            KeyDown += Form1_KeyDown;
             ResumeLayout(false);
             PerformLayout();
-            this.KeyDown += Form1_KeyDown;
         }
 
         #endregion
