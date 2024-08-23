@@ -1,4 +1,4 @@
-namespace Practico1
+namespace Practicos.Practico_1
 {
     public partial class Formulario1 : Form
     {
