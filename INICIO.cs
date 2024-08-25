@@ -1,7 +1,8 @@
 ﻿using Practicos.Practico_1;
 using Practicos.Practico_2;
 using Practicos.Practico_3;
-
+using Practicos.Practico_4;
+using Practicos.Practico_5;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,6 +35,22 @@ namespace Practicos
         private void button3_Click(object sender, EventArgs e)
         {
             new MDIParent1().Show();
+        }
+
+        private void INICIO_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            new Formulario4().Show();
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            new Formulario5().Show();
         }
     }
 }

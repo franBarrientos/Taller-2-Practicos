@@ -2,6 +2,7 @@ using Practicos.Practico_1;
 using Practicos.Practico_2;
 using Practicos.Practico_3;
 using Practicos.Practico_4;
+using Practicos.Practico_5;
 using System.Runtime.CompilerServices;
 
 namespace Practicos
@@ -21,8 +22,9 @@ namespace Practicos
             //Application.Run(new Formulario2());
             //Application.Run(new Formulario3());
             //Application.Run(new MDIParent1());
-            Application.Run(new Formulario4());
-            //Application.Run(new INICIO());
+            //Application.Run(new Formulario4());
+            Application.Run(new INICIO());
+            //Application.Run(new Formulario5());
 
         }
     }
