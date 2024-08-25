@@ -101,6 +101,7 @@ namespace Practicos.Practico_5
                 return;
             }
 
+            String fecha = dateTimePicker1.Value.ToString("dd/MM/yyyy");
             Image img = null;
             try
             {
@@ -124,7 +125,7 @@ namespace Practicos.Practico_5
                 if (ask == DialogResult.Yes)
                 {
                     MessageBox.Show("El cliente " + name + " " + surname + " ha sido insertado con exito.", "Insercion Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    dataGridView1.Rows.Add(name, surname, saldo, "Hombre", new DataGridViewButtonCell() { Value = "Eliminar" }, saldo, img, path);
+                    dataGridView1.Rows.Add(name, surname, fecha, "Hombre", new DataGridViewButtonCell() { Value = "Eliminar" }, saldo ,  img, path);
                 }
 
             }
@@ -140,10 +141,10 @@ namespace Practicos.Practico_5
                 if (ask == DialogResult.Yes)
                 {
                     MessageBox.Show("La clienta " + name + " " + surname + " ha sido insertado con exito.", "Insercion Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    dataGridView1.Rows.Add(name, surname, saldo, "Mujer", new DataGridViewButtonCell() { Value = "Eliminar" }, saldo, img, path);
+                    dataGridView1.Rows.Add(name, surname, fecha, "Mujer", new DataGridViewButtonCell() { Value = "Eliminar" }, saldo, img, path);
                 }
             }
-            if (Int32.Parse(saldo) <  50)
+            if (Int32.Parse(saldo) < 50)
             {
                 int rowIndex = dataGridView1.Rows.Count - 1;
 
@@ -182,7 +183,27 @@ namespace Practicos.Practico_5
                     dataGridView1.Rows.RemoveAt(e.RowIndex);
                 }
             }
+
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "Sexo" && e.RowIndex >= 0)
+            {
+                string sexo = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                if (sexo == "Hombre")
+                {
+                    CBHombre.Checked = true;
+                    CBMujer.Checked = false;
+                }
+                else
+                {
+                    CBMujer.Checked = true;
+                    CBHombre.Checked = false;
+
+                }
+
             }
+
         }
+
+
+    }
 }
 

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Formulario5));
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panel1 = new Panel();
             dateTimePicker1 = new DateTimePicker();
             CBMujer = new CheckBox();
@@ -266,6 +268,8 @@
             // 
             // Apellido
             // 
+            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            Apellido.DefaultCellStyle = dataGridViewCellStyle1;
             Apellido.HeaderText = "Apellido";
             Apellido.MinimumWidth = 8;
             Apellido.Name = "Apellido";
@@ -274,6 +278,8 @@
             // 
             // Nombre
             // 
+            dataGridViewCellStyle2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            Nombre.DefaultCellStyle = dataGridViewCellStyle2;
             Nombre.HeaderText = "Nombre";
             Nombre.MinimumWidth = 8;
             Nombre.Name = "Nombre";
