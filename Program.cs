@@ -21,8 +21,8 @@ namespace Practicos
             //Application.Run(new Formulario2());
             //Application.Run(new Formulario3());
             //Application.Run(new MDIParent1());
-            //Application.Run(new Formulario4());
-            Application.Run(new INICIO());
+            Application.Run(new Formulario4());
+            //Application.Run(new INICIO());
 
         }
     }
