@@ -95,7 +95,7 @@ namespace Practicos.Practico_5
             }
 
 
-            if (!CBHombre.Checked && !CBMujer.Checked)
+            if (!RBHombre.Checked && !RBMujer.Checked)
             {
                 MessageBox.Show("Por favor, seleccione un genero.", "Entrada inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -113,7 +113,7 @@ namespace Practicos.Practico_5
                 return;
             }
 
-            if (CBHombre.Checked)
+            if (RBHombre.Checked)
             {
                 DialogResult ask = MessageBox.Show(
                    "¿Seguro que desea insertar un nuevo Cliente?",
@@ -125,7 +125,7 @@ namespace Practicos.Practico_5
                 if (ask == DialogResult.Yes)
                 {
                     MessageBox.Show("El cliente " + name + " " + surname + " ha sido insertado con exito.", "Insercion Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    dataGridView1.Rows.Add(name, surname, fecha, "Hombre", new DataGridViewButtonCell() { Value = "Eliminar" }, saldo ,  img, path);
+                    dataGridView1.Rows.Add(name, surname, fecha, "Hombre", new DataGridViewButtonCell() { Value = "Eliminar" }, saldo, img, path);
                 }
 
             }
@@ -153,21 +153,6 @@ namespace Practicos.Practico_5
             }
         }
 
-        private void CBHombre_CheckedChanged(object sender, EventArgs e)
-        {
-            if (CBHombre.Checked)
-            {
-                CBMujer.Checked = false;
-            }
-        }
-
-        private void CBMujer_CheckedChanged(object sender, EventArgs e)
-        {
-            if (CBMujer.Checked)
-            {
-                CBHombre.Checked = false;
-            }
-        }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -189,13 +174,13 @@ namespace Practicos.Practico_5
                 string sexo = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
                 if (sexo == "Hombre")
                 {
-                    CBHombre.Checked = true;
-                    CBMujer.Checked = false;
+                    RBHombre.Checked = true;
+                    RBMujer.Checked = false;
                 }
                 else
                 {
-                    CBMujer.Checked = true;
-                    CBHombre.Checked = false;
+                    RBMujer.Checked = true;
+                    RBHombre.Checked = false;
 
                 }
 
@@ -203,7 +188,21 @@ namespace Practicos.Practico_5
 
         }
 
+        private void RBMujer_CheckedChanged(object sender, EventArgs e)
+        {
+            if (RBMujer.Checked)
+            {
+                RBHombre.Checked = false;
+            }
+        }
 
+        private void RBHombre_CheckedChanged(object sender, EventArgs e)
+        {
+            if (RBHombre.Checked)
+            {
+                RBMujer.Checked = false;
+            }
+        }
     }
 }
 

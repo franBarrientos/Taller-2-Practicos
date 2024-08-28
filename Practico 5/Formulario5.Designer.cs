@@ -32,9 +32,9 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panel1 = new Panel();
+            RBMujer = new RadioButton();
+            RBHombre = new RadioButton();
             dateTimePicker1 = new DateTimePicker();
-            CBMujer = new CheckBox();
-            CBHombre = new CheckBox();
             BTAgregar = new Button();
             TBFoto = new TextBox();
             button1 = new Button();
@@ -66,9 +66,9 @@
             // 
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.BorderStyle = BorderStyle.Fixed3D;
+            panel1.Controls.Add(RBMujer);
+            panel1.Controls.Add(RBHombre);
             panel1.Controls.Add(dateTimePicker1);
-            panel1.Controls.Add(CBMujer);
-            panel1.Controls.Add(CBHombre);
             panel1.Controls.Add(BTAgregar);
             panel1.Controls.Add(TBFoto);
             panel1.Controls.Add(button1);
@@ -86,38 +86,40 @@
             panel1.Size = new Size(546, 424);
             panel1.TabIndex = 0;
             // 
+            // RBMujer
+            // 
+            RBMujer.AutoSize = true;
+            RBMujer.BackColor = Color.Transparent;
+            RBMujer.ForeColor = SystemColors.ButtonHighlight;
+            RBMujer.Location = new Point(358, 191);
+            RBMujer.Name = "RBMujer";
+            RBMujer.Size = new Size(82, 29);
+            RBMujer.TabIndex = 15;
+            RBMujer.TabStop = true;
+            RBMujer.Text = "Mujer";
+            RBMujer.UseVisualStyleBackColor = false;
+            RBMujer.CheckedChanged += RBMujer_CheckedChanged;
+            // 
+            // RBHombre
+            // 
+            RBHombre.AutoSize = true;
+            RBHombre.BackColor = Color.Transparent;
+            RBHombre.ForeColor = SystemColors.ButtonHighlight;
+            RBHombre.Location = new Point(228, 191);
+            RBHombre.Name = "RBHombre";
+            RBHombre.Size = new Size(103, 29);
+            RBHombre.TabIndex = 14;
+            RBHombre.TabStop = true;
+            RBHombre.Text = "Hombre";
+            RBHombre.UseVisualStyleBackColor = false;
+            RBHombre.CheckedChanged += RBHombre_CheckedChanged;
+            // 
             // dateTimePicker1
             // 
             dateTimePicker1.Location = new Point(323, 137);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(195, 31);
             dateTimePicker1.TabIndex = 13;
-            // 
-            // CBMujer
-            // 
-            CBMujer.AutoSize = true;
-            CBMujer.BackColor = Color.Transparent;
-            CBMujer.ForeColor = SystemColors.ControlLight;
-            CBMujer.Location = new Point(363, 192);
-            CBMujer.Name = "CBMujer";
-            CBMujer.Size = new Size(83, 29);
-            CBMujer.TabIndex = 12;
-            CBMujer.Text = "Mujer";
-            CBMujer.UseVisualStyleBackColor = false;
-            CBMujer.CheckedChanged += CBMujer_CheckedChanged;
-            // 
-            // CBHombre
-            // 
-            CBHombre.AutoSize = true;
-            CBHombre.BackColor = Color.Transparent;
-            CBHombre.ForeColor = SystemColors.ControlLight;
-            CBHombre.Location = new Point(228, 192);
-            CBHombre.Name = "CBHombre";
-            CBHombre.Size = new Size(104, 29);
-            CBHombre.TabIndex = 11;
-            CBHombre.Text = "Hombre";
-            CBHombre.UseVisualStyleBackColor = false;
-            CBHombre.CheckedChanged += CBHombre_CheckedChanged;
             // 
             // BTAgregar
             // 
@@ -374,8 +376,6 @@
         private OvalImg ovalImg1;
         private DataGridView dataGridView1;
         private Button BTAgregar;
-        private CheckBox CBHombre;
-        private CheckBox CBMujer;
         private DateTimePicker dateTimePicker1;
         private DataGridViewTextBoxColumn Apellido;
         private DataGridViewTextBoxColumn Nombre;
@@ -385,5 +385,7 @@
         private DataGridViewTextBoxColumn Saldo;
         private DataGridViewImageColumn Foto;
         private DataGridViewTextBoxColumn Ruta;
+        private RadioButton RBHombre;
+        private RadioButton RBMujer;
     }
 }
